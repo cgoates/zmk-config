@@ -30,9 +30,9 @@
 // +-------+-----+-----+-----+-----+-----+  +------+------+     +------+------+  +-----+-----+-----+-----+-----+-------+
 // | SHIFT |  Z  |  X  |  C  |  V  |  B  |  | CTRL | ALT  |     | GUI  |  LDR |  |  N  |  M  |  ,  |  .  |  /  | SHIFT |
 // +-------+-----+-----+-----+-----+-+---+--+------+------+     +------+------+--+---+-+-----+-----+-----+-----+-------+
-//         |  `  |  \  | LFT | RGT | | BKSP |      | HOME |     | PGUP |      |      | | UP  | DWN |  [  |  ]  |
-//         +-----+-----+-----+-----+ |      | ENTER|------+     +------| SHFT | SPC  | +-----+-----+-----+-----+
-//                                   |  DEL |      | END  |     | PGDN |      |      |
+//         |  `  |  \  | LFT | RGT | |      |      | HOME |     | PGUP |      |      | | UP  | DWN |  [  |  ]  |
+//         +-----+-----+-----+-----+ | BKSP | ENTER|------+     +------| SHFT | SPC  | +-----+-----+-----+-----+
+//                                   |      |      | ESC  |     | PGDN |      |      |
 //                                   +------+------+------+     +------+------+------+
             bindings = <
 &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4    &kp N5                                                  &kp N6  &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
@@ -55,15 +55,15 @@
 // |       |     |     |     |     |     |  | CTRL | ALT  |     | GUI  | XXXX |  |     |     |     |     |     |       |
 // +-------+-----+-----+-----+-----+-+---+--+------+------+     +------+------+--+---+-+-----+-----+-----+-----+-------+
 //         | RST |     |     |     | |      |      | HOME |     | PGUP |      |      | |     |     |     | RST |
-//         +-----+-----+-----+-----+ | BKSP | DEL  |------+     +------| ENTER| SPC  | +-----+-----+-----+-----+
-//                                   |      |      | END  |     | PGDN |      |      |
+//         +-----+-----+-----+-----+ | DEL  | ENTER|------+     +------| SHFT | SPC  | +-----+-----+-----+-----+
+//                                   |      |      | ESC  |     | PGDN |      |      |
 //                                   +------+------+------+     +------+------+------+
             bindings = <
 &none      &kp F1      &kp F2  &kp F3  &kp F4  &kp F5                                  &kp F6   &kp F7   &kp F8 &kp F9    &kp F10     &kp F11
 &bt BT_CLR &bt BT0     &bt BT1 &bt BT2 &bt BT3 &bt BT4                                 &none    &none    &none  &none     &none       &kp F12
 &kp CLCK   &none       &none   &none   &none   &none                                   &kp LEFT &kp DOWN &kp UP &kp RIGHT &none       &none
 &none      &none       &none   &none   &none   &none   &trans &trans     &trans &trans &none    &none    &none  &none     &none       &none
-           &bootloader &none   &none   &none   &trans  &trans &trans     &trans &trans &trans   &none    &none  &none     &bootloader
+           &bootloader &none   &none   &none   &kp DEL &trans &trans     &trans &trans &trans   &none    &none  &none     &bootloader
                                                               &trans     &trans
                                                           >;
         };
@@ -95,12 +95,6 @@
             timeout-ms = <50>;
             key-positions = <19 31>;
             bindings = <&kp RBKT>;
-        };
-
-        combo_shiftdel {
-          timeout-ms = <5>;
-          key-positions = <56 60>;
-          bindings = <&kp DEL>;
         };
     };
 };
