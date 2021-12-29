@@ -6,7 +6,7 @@ manifest:
       url-base: https://github.com/cgoates
   projects:
     - name: zmk
-      remote: dactylcc
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
   self:
