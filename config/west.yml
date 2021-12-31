@@ -8,7 +8,7 @@ manifest:
       url-base: https://github.com/krikun98
   projects:
     - name: zmk
-      remote: mousekeys
+      remote: dactylcc
       revision: mouse-pr
       import: app/west.yml
   self:
