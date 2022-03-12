@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/krikun98
   projects:
     - name: zmk
-      remote: dactylcc
-      revision: ble-profile-display
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
