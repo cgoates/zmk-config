@@ -24,7 +24,7 @@
             label = "Lambda function";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            actions = <MAC_TAP MAC_TAP MAC_TAP MAC_TAP>;
+            actions = <MAC_TAP_WAIT(20) MAC_TAP_WAIT(20) MAC_TAP_WAIT(20) MAC_TAP_WAIT(20)>;
             bindings = <&kp LBKT &kp LS(N7) &kp RBKT &kp LS(N9)>;
         };
     };
