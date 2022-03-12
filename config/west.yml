@@ -6,10 +6,12 @@ manifest:
       url-base: https://github.com/cgoates
     - name: mousekeys
       url-base: https://github.com/krikun98
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: petejohanson
+      revision: behaviors/macros-take-two
       import: app/west.yml
   self:
     path: config
