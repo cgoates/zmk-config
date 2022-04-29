@@ -19,3 +19,5 @@ include:
     shield: dactyl_cc_right
   - board: seeeduino_xiao_ble
     shield: paintbrush_matrix
+  - board: nice_nano_v2
+    shield: joypad
