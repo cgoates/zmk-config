@@ -87,7 +87,7 @@
 		/*****************************************
 		 * Center press combos
 		 *****************************************/
-        combo_bootloader { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <LEFT_CENTER RIGHT_CENTER>; bindings = <&bootloader>; }
+        combo_bootloader { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <LEFT_CENTER RIGHT_CENTER>; bindings = <&bootloader>; };
 
 		/*****************************************
 		 *  > 3-key combos
