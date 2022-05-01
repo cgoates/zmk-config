@@ -8,15 +8,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define KEY_I 5
+#define KEY_I 7
 #define KEY_O 1
-#define KEY_N 4
-#define KEY_S 7
+#define KEY_N 5
+#define KEY_S 9
+#define RIGHT_CENTER 6
 
 #define KEY_A 2
 #define KEY_T 0
-#define KEY_H 3
-#define KEY_E 6
+#define KEY_H 4
+#define KEY_E 8
+#define LEFT_CENTER 3
 
 #define TIMEOUT_COMBO_2 175
 
@@ -25,17 +27,17 @@
 		compatible = "zmk,keymap";
         base_layer {
             bindings = <
-                    &kp T          &kp O
-                &kp A   &kp H  &kp N   &kp I
-                    &kp E          &kp S
+                        &kp T               &kp O
+                &lt 1 A &trans &kp H  &kp N &trans &kp I
+                        &kp E               &kp S
             >;
         };
 
         num_layer {
             bindings = <
-                    &kp N5         &kp N8
-                &trans  &trans  &kp N4 &kp N6
-                    &kp N0         &kp N2
+                       &kp N9                &kp N4
+                &trans &trans &trans  &kp N2 &trans &kp N3
+                       &kp N0                &kp N1
             >;
         };
     };
@@ -68,19 +70,24 @@
 		 *****************************************/
 		combo_b          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_H KEY_N>; bindings = <&kp B>; layers = <0>; };
 		combo_p          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_A KEY_I>; bindings = <&kp P>; layers = <0>; };
-		combo_j          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_O>; bindings = <&kp J>; layers = <0>; };
+		combo_r          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_O>; bindings = <&kp J>; layers = <0>; };
 		combo_k          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_S>; bindings = <&kp K>; layers = <0>; };
 		/*****************************************
 		 * Both thumbs perpendicular
 		 *****************************************/
+		combo_j          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_I>; bindings = <&kp J>; layers = <0>; };
 		combo_q          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_N>; bindings = <&kp Q>; layers = <0>; };
 		combo_w          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_N>; bindings = <&kp W>; layers = <0>; };
 		combo_z          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_I>; bindings = <&kp Z>; layers = <0>; };
 		combo_enter      { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_A KEY_S>; bindings = <&kp ENTER>; layers = <0>; };
 		combo_shift      { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_A KEY_O>; bindings = <&sk LSHIFT>; layers = <0>; };
-		combo_semicolon  { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_I>; bindings = <&kp SEMICOLON>; layers = <0>; };
 		combo_comma      { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_H KEY_S>; bindings = <&kp COMMA>; layers = <0>; };
 		combo_period     { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_H KEY_O>; bindings = <&kp PERIOD>; layers = <0>; };
+
+		/*****************************************
+		 * Center press combos
+		 *****************************************/
+        combo_bootloader { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <LEFT_CENTER RIGHT_CENTER>; bindings = <&bootloader>; }
 
 		/*****************************************
 		 *  > 3-key combos
@@ -92,5 +99,17 @@
 		combo_gui        { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_H KEY_N KEY_O>; bindings = <&kp LGUI>; layers = <0>; };
 		combo_esc        { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_A KEY_E KEY_S KEY_I>; bindings = <&kp ESC>; layers = <0>; };
 		combo_delete     { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_H KEY_O KEY_I>; bindings = <&kp DELETE>; layers = <0>; };
+
+		/*****************************************
+		 * Number layer combos
+		 *****************************************/
+		combo_5          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_S>; bindings = <&kp N5>; layers = <1>; };
+		combo_6          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_N>; bindings = <&kp N6>; layers = <1>; };
+		combo_7          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_I>; bindings = <&kp N7>; layers = <1>; };
+		combo_8          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_O>; bindings = <&kp N8>; layers = <1>; };
+		combo_semicolon  { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_S>; bindings = <&kp SEMICOLON>; layers = <1>; };
+		combo_minus      { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_N>; bindings = <&kp MINUS>; layers = <1>; };
+		combo_equals     { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_I>; bindings = <&kp EQUALS>; layers = <1>; };
+		// combo_u          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_O>; bindings = <&kp U>; layers = <1>; };
 	};
 };
