@@ -109,7 +109,7 @@
 		combo_8          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_O>; bindings = <&kp N8>; layers = <1>; };
 		combo_semicolon  { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_S>; bindings = <&kp SEMICOLON>; layers = <1>; };
 		combo_minus      { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_N>; bindings = <&kp MINUS>; layers = <1>; };
-		combo_equals     { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_I>; bindings = <&kp EQUALS>; layers = <1>; };
+		combo_equals     { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_I>; bindings = <&kp EQUAL>; layers = <1>; };
 		// combo_u          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_O>; bindings = <&kp U>; layers = <1>; };
 	};
 };
