@@ -70,7 +70,7 @@
 		 *****************************************/
 		combo_b          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_H KEY_N>; bindings = <&kp B>; layers = <0>; };
 		combo_p          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_A KEY_I>; bindings = <&kp P>; layers = <0>; };
-		combo_r          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_O>; bindings = <&kp J>; layers = <0>; };
+		combo_r          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_O>; bindings = <&kp R>; layers = <0>; };
 		combo_k          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_S>; bindings = <&kp K>; layers = <0>; };
 		/*****************************************
 		 * Both thumbs perpendicular
