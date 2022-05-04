@@ -64,9 +64,9 @@
 
 		sym_layer {
 			bindings = <
-					   &trans                &trans
-				&trans &trans &trans  &trans &trans &trans
-				       &trans                &trans
+					     &kp LBKT                 &kp LBRC
+				&kp BSLH &trans &kp SLASH  &trans &trans &trans
+				         &kp RBKT                 &kp RBRC
 			>;
 		};
 
@@ -164,5 +164,17 @@
 		combo_minus      { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_N>; bindings = <&kp MINUS>; layers = <1>; };
 		combo_equals     { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_I>; bindings = <&kp EQUAL>; layers = <1>; };
 		// combo_u          { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_O>; bindings = <&kp U>; layers = <1>; };
+
+		/*****************************************
+		 * Number layer combos
+		 *****************************************/
+		combo_backtick   { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_S>; bindings = <&kp GRAVE>; layers = <2>; };
+		combo_singleqt   { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_A KEY_S>; bindings = <&kp SINGLE_QUOTE>; layers = <2>; };
+		combo_pipe       { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_A KEY_O>; bindings = <&kp PIPE>; layers = <2>; };
+		combo_lt         { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_T KEY_O>; bindings = <&kp LESS_THAN>; layers = <2>; };
+		combo_gt         { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_S>; bindings = <&kp GREATER_THAN>; layers = <2>; };
+		combo_doubleqt   { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_H KEY_S>; bindings = <&kp DOUBLE_QUOTES>; layers = <2>; };
+		combo_question   { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_H KEY_O>; bindings = <&kp QUESTION>; layers = <2>; };
+		combo_tilde      { timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_O>; bindings = <&kp TILDE>; layers = <2>; };
 	};
 };
