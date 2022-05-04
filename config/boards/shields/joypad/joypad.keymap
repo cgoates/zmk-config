@@ -48,9 +48,9 @@
 		compatible = "zmk,keymap";
         base_layer {
             bindings = <
-                        &kp T                  &kp O
-                &lt 1 A &trans &slt 1 H  &kp N &trans &kp I
-                        &kp E                  &kp S
+                        &lt 3 T                  &kp O
+                &lt 1 A &trans &slt 1 H  &lt 5 N &trans &lt 2 I
+                        &lt 4 E                  &kp S
             >;
         };
 
@@ -61,6 +61,38 @@
                        &kp N0                &kp N1
             >;
         };
+
+		sym_layer {
+			bindings = <
+					   &trans                &trans
+				&trans &trans &trans  &trans &trans &trans
+				       &trans                &trans
+			>;
+		};
+
+		arrow_layer {
+			bindings = <
+					      &trans                    &kp UP
+				&kp LCTRL &trans &kp LGUI  &kp LEFT &trans &kp RIGHT
+				          &trans                    &kp DOWN
+			>;
+		};
+
+		nav_layer {
+			bindings = <
+					   &trans                  &kp PG_UP
+				&trans &trans &trans  &kp HOME &trans &kp END
+				       &trans                  &kp PG_DN
+			>;
+		};
+
+		mouse_layer {
+			bindings = <
+					   &trans                &trans
+				&trans &trans &trans  &trans &trans &trans
+				       &trans                &trans
+			>;
+		};
     };
 
 	combos {
