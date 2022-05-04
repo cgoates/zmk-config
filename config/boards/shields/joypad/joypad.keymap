@@ -41,7 +41,7 @@
 		#binding-cells = <2>;
 		flavor = "tap-preferred";
 		tapping-term-ms = <200>;
-		bindings = <&mo>, <&shift_num>;
+		bindings = <&shift_num>, <&kp>;
 	};
 
     keymap {
