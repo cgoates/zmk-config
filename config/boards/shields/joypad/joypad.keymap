@@ -23,13 +23,34 @@
 #define TIMEOUT_COMBO_2 175
 
 / {
+	macros {
+		shift_num: shift_num {
+			label = "macro_shift_num";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <0>;
+			bindings = <&macro_press &kp LSHFT &mo 1>
+					 , <&macro_pause_for_release>
+					 , <&macro_release &mo 1 &kp LSHFT>;
+		};
+	};
+
+	slt: shift_layer_tap {
+		compatible = "zmk,behavior-hold-tap";
+		label = "SHIFT_LAYER_TAP";
+		#binding-cells = <2>;
+		flavor = "tap-preferred";
+		tapping-term-ms = <200>;
+		bindings = <&mo>, <&shift_num>;
+	};
+
     keymap {
 		compatible = "zmk,keymap";
         base_layer {
             bindings = <
-                        &kp T               &kp O
-                &lt 1 A &trans &kp H  &kp N &trans &kp I
-                        &kp E               &kp S
+                        &kp T                  &kp O
+                &lt 1 A &trans &slt 1 H  &kp N &trans &kp I
+                        &kp E                  &kp S
             >;
         };
 
