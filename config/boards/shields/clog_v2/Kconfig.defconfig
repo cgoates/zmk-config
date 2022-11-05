@@ -11,9 +11,3 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_CLOG_V2
-
-config ZMK_SPLIT
-    default y
-
-endif
