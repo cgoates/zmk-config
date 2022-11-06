@@ -17,7 +17,7 @@
     keymap {
         compatible = "zmk,keymap";
         base {
-            label = "ARTSEY"
+            label = "ARTSEY";
             bindings = <
                                                          &none &none       &none                                              &none
             &kp ESC &layer_numbers_kp LAYER_ID_NUMBERS A &kp T &kp H       &layer_parentheticals_kp LAYER_ID_PARENTHETICALS E &none
