@@ -6,10 +6,10 @@
 #define KEY_H 7
 #define KEY_T 6
 #define KEY_A 5
-#define KEY_S 12
-#define KEY_N 11
-#define KEY_O 10
-#define KEY_I 9
+#define KEY_S 13
+#define KEY_N 12
+#define KEY_O 11
+#define KEY_I 10
 
 #include "artsey.dtsi"
 
